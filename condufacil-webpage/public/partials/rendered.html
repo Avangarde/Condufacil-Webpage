@@ -1,0 +1,190 @@
+<div class="page-header">
+    <center><h1>{{obj.name}}</h1></center>
+</div>
+
+
+<accordion>
+
+    <!--Start-->
+    <accordion-group is-open="false">
+    <accordion-heading>
+    <center>Information générales</center>
+</accordion-heading>
+
+<br>
+
+<div class="panel-body">
+    <br>
+    <p class="lead"><strong>Description</strong></p>
+    <p>{{obj.description}}</p>
+
+</div>
+
+
+</accordion-group>
+
+<!--Start-->
+
+
+<accordion-group is-open="false">
+<accordion-heading>
+<center>Specifications</center>
+</accordion-heading>
+
+<br>
+
+<div class="panel panel-default">
+
+    <table class="table table-hover">
+        <colgroup>
+        <col class="col-md-4"></col>
+        <col class="col-md-8"></col>
+    </colgroup>
+
+
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Value</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="spec in obj.specs | orderBy: 'name'">
+            <td>{{spec.name}}</td>
+            <td>
+                <img ng-src="{{spec.value}}" ng-show="{{spec.isImg}}"  alt="{{spec.name}}" height="100" width="100">
+                <span ng-hide="{{spec.isImg}}">{{spec.value}}</span>
+            </td>
+        </tr>
+
+    </tbody>
+</table>
+
+
+</div>
+
+</accordion-group>
+
+
+<accordion-group is-open="false">
+<accordion-heading>
+<center>Statistiques en temps réel</center>
+</accordion-heading>
+
+<br>
+
+<div class="panel panel-default">
+    <br>
+
+    <table class="table table-hover">
+        <colgroup>
+        <col class="col-md-4"></col>
+        <col class="col-md-8"></col>
+    </colgroup>
+
+
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="stat in obj.stats | orderBy: 'name'">
+            <td>{{stat.name}}</td>
+            <td>
+                <div ng-init="statusManager(stat)" class="progress">
+                    <div id="{{stat.name}}Bar" class="progress-bar progress-bar-striped active" role="progressbar" aria-valuemin="{{stat.val_min}}" aria-valuemax="{{stat.val_max}}" style="min-width: 2em;"></div>
+
+                </div>
+
+            </td>
+
+
+
+        </tr>
+
+    </tbody>
+</table>
+
+</div>
+
+
+</accordion-group>
+
+<accordion-group is-open="false">
+<accordion-heading>
+<center>Interactions</center>
+</accordion-heading>
+
+<br>
+
+<div class="panel panel-default">
+    <br>
+
+    <div class="panel panel-default">
+
+        <table class="table table-hover">
+            <colgroup>
+            <col class="col-md-2"></col>
+            <col class="col-md-10"></col>
+
+        </colgroup>
+
+
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Status</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="action in obj.actions | orderBy: 'name'">
+                <td>{{action.name}}</td>
+                <td>
+                        <rzslider ng-init="actionManager(action)"
+                        rz-slider-floor="action.val_min"
+                        rz-slider-ceil="action.val_max" 
+                        rz-slider-model="action.value"
+                        rz-slider-on-change="actionOnSlide(action)">
+                        </rzslider>
+                        {{action.value}}
+
+
+            </td>
+
+        </tr>
+        
+
+    </tbody>
+</table>
+
+
+</div>
+</div>
+
+
+</accordion-group>
+
+<accordion-group is-open="false">
+<accordion-heading>
+<center>D'Autres</center>
+</accordion-heading>
+
+<br>
+
+<div class="panel panel-default">
+    <span ng-if="(obj.miscs.url && obj.miscs.url!='')">
+         <p>{{obj.miscs.url}}</p>
+    </span>
+
+
+</div>
+
+
+</accordion-group>
+
+</accordion>
+
+
