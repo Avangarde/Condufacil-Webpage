@@ -1,4 +1,4 @@
-var app = angular.module('condufacilMain', ['ui.router']);
+var app = angular.module('condufacilMain', ['ui.router', 'ui.bootstrap']);
 
 app.config([
 	'$stateProvider',
@@ -9,7 +9,17 @@ app.config([
 			url: '/inicio',
 			templateUrl: 'partials/home.html',
 			controller: 'MainCtrl'			
-		});
+		})
+		.state('pricing',{
+			url: '/precios/:param',
+			templateUrl: 'partials/pricing.html',
+			controller: 'PriceCtrl'			
+		})
+		.state('pricing1',{
+			url: '/precios',
+			templateUrl: 'partials/pricing.html',
+			controller: 'PriceCtrl'			
+		});;
 		
 		$urlRouterProvider.otherwise('inicio');
 	}]);
@@ -25,6 +35,36 @@ app.controller('MainCtrl', ['$scope', function($scope){
 
 	
 }]);
+
+app.controller('PriceCtrl', ['$scope', '$stateParams', function($scope, $stateParams){
+
+	 $scope.tabs = [{
+            title: 'AUTOMOVILES',
+            url: 'auto'
+        }, {
+            title: 'MOTOCICLETAS',
+            url: 'moto'
+        }];
+        
+    if ($stateParams.param){
+    	$scope.currentTab = $stateParams.param;
+    }else{
+    	$scope.currentTab = "auto";
+    }
+
+    	
+
+    $scope.onClickTab = function (tab) {
+        $scope.currentTab = tab.url;
+    }
+    
+    $scope.isActiveTab = function(tabUrl) {
+        return tabUrl == $scope.currentTab;
+    }
+
+}]
+
+        );
 
 
 //Attention to the mapping, it can get confusing.
