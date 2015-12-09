@@ -8,7 +8,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 
 
-
+  <link rel="icon" type="image/png" href="/content/favicon.png">
 	<link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
 	<link href="/stylesheets/style.css" rel="stylesheet">
 
@@ -20,6 +20,14 @@
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.10/angular-ui-router.js"></script>
 </head>
 <body ng-app="condufacilMain">
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.5";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 
 	<div class="num" id="banner">
 
@@ -50,7 +58,7 @@
         <li><a href="#/precios">PRECIOS</a></li>
         <li><a href="#/vehiculos">VEHICULOS</a></li>
         <li><a href="#/instalaciones">INSTALACIONES</a></li>
-        <li><a href="#map-modal" data-toggle="modal" data-target="#map-modal">CONTACTENOS</a></li>
+        <li><a href="#/map-modal" data-toggle="modal" data-target="#map-modal">CONTACTENOS</a></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">INTRANET<span class="caret"></span></a>
           <ul class="dropdown-menu">
@@ -83,7 +91,9 @@
                       <center>
 
                         <p>El Centro de Enseñanza Automovilistica Condufacil se encuentra ubicado en la Calle 6 #71a-11.</p>
-                        <iframe width="800" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJywFI7QKcP44RSPvBguOOAPA&key=AIzaSyAtEfl3-4HwYFmBeMJKVVG96TZty_qYsv4" allowfullscreen></iframe>
+                        <div class="google-maps">
+                          <iframe width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJywFI7QKcP44RSPvBguOOAPA&key=AIzaSyAtEfl3-4HwYFmBeMJKVVG96TZty_qYsv4" allowfullscreen></iframe>
+                        </div>
                         <p>Los horarios de atencion son los siguientes:
                         Lunes a Sabado:
                         8am a 12m
@@ -109,10 +119,43 @@
 <br>
 
 	<footer class="footer-av">
-		<div class="copyright">
-			© 2015 - CEA Condufacil - Powered by: Avangarde Software Solutions
-		</div>
-	</footer>
+  <div class="container">
+  <br>
+    <div class="row">
+      <div class="col-xs-12 col-sm-4">
+        <p>CEA Condufacil<br>
+        Autorizacion de Funcionamiento bajo:<br>
+        Resolucion 0000619 de 2013 del Ministerio de Transporte<br>
+        Resolucion 15-066 de 2012 de la Secretaria de Educacion de Bogota<br>
+        —<br>
+        Todos los derechos reservados.<br>
+        © 2015 - CEA Condufacil<br>
+        Powered by: Avangarde Software Solutions<br>
+        </p>
+      </div>
+
+      <div class="col-xs-12 col-sm-3 col-lg-2 col-sm-offset-1 col-lg-offset-2">
+        <p>
+        <strong>Telefonos:</strong> <br> <a href="tel:2902371 "><span itemprop="telephone">+57 (1) 290 2371</span></a> <br> <a href="tel:4141250"><span itemprop="telephone">+57 (1) 414 1250</span></a><br>
+        <strong>Correo Electronico:</strong> <br> <a href="mailto:servicioalcliente@ceacondufacil.com"><span itemprop="email">servicioalcliente@ceacondufacil.com</span></a><br>
+        —<br>
+        <div class="fb-like" data-href="https://www.facebook.com/condufacil/" data-width="30" data-layout="box_count" data-action="like" data-show-faces="true" data-share="true"></div>
+        </p>
+      </div>
+
+
+      <div class="col-xs-12 col-sm-3 col-lg-2 col-sm-offset-1 col-lg-offset-1">
+        <address>
+          <strong>Direccion:</strong>
+          <br>
+          <span>Calle 6 #71A-11</span>,<br>
+          Nueva Marsella, Kennedy<br>
+          <span>Bogota</span>, <span>CO</span>. 
+        </address>
+      </div>
+    </div>
+  </div>
+</footer>
 
 
 

@@ -11,14 +11,12 @@ app.config([
 			controller: 'MainCtrl'			
 		})
 		.state('pricing',{
-			url: '/precios/:param',
-			templateUrl: 'partials/pricing.html',
-			controller: 'PriceCtrl'			
-		})
-		.state('pricing1',{
 			url: '/precios',
 			templateUrl: 'partials/pricing.html',
 			controller: 'PriceCtrl'			
+		})
+		.state('modal',{
+			url: '/map-modal'
 		});;
 		
 		$urlRouterProvider.otherwise('inicio');
