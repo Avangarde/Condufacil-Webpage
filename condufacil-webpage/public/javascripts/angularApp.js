@@ -15,6 +15,11 @@ app.config([
 			templateUrl: 'partials/pricing.html',
 			controller: 'PriceCtrl'			
 		})
+		.state('about',{
+			url: '/nosotros',
+			templateUrl: 'partials/about.html',
+			controller: 'MainCtrl'			
+		})
 		.state('modal',{
 			url: '/map-modal'
 		});;

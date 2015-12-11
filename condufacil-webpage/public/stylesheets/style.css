@@ -290,3 +290,8 @@ th {
   text-align: center;
   vertical-align: middle;
 }
+
+p {
+    text-align: justify;
+    text-justify: inter-word;
+}
