@@ -4,7 +4,7 @@
  * Module dependencies.
  */
 
-var app = require('condufacil-webpage/app');
+var app = require('./condufacil-webpage/app');
 var debug = require('debug')('condufacil-webpage:server');
 var http = require('http');
 
