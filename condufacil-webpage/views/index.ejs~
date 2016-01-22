@@ -1,0 +1,32 @@
+<html>
+<head>
+	<title>
+		C.E.A. Condufacil
+	</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<link href="/stylesheets/style.css" rel="stylesheet">
+	<link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+	
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>
+	<script type="text/javascript" src="/javascripts/angularApp.js"></script>
+
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.10/angular-ui-router.js"></script>
+</head>
+<body ng-app="condufacilMain">
+
+	<div class="row">
+		<div class="container">
+
+			<ui-view></ui-view>
+
+		</div>
+
+	</div>
+
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,176 @@
+<html>
+<head>
+	<title>
+		C.E.A. Condufacil
+	</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+
+  <link rel="icon" type="image/png" href="/content/favicon.png">
+	<link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/stylesheets/style.css" rel="stylesheet">
+
+	
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>
+	<script type="text/javascript" src="/javascripts/angularApp.js"></script>
+	<script type="text/javascript" src="/javascripts/ui-bootstrap-tpls-0.13.3.js"></script>
+
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.10/angular-ui-router.js"></script>
+</head>
+<body ng-app="condufacilMain">
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.5";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+	<div class="num" id="banner">
+
+  <span><center>Para cualquier inquietud, contacte nuestros asesores al  <b>2 90 23 71</b> o <b>4 14 12 50</b></center></span>
+  
+</div>
+
+<nav class="navbar navbar-default navbar-static-top" role="navigation" id="topnavbar">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#/inicio" title="Volver al Inicio">
+          <img style="max-width:300px; margin-top: -15px;" src="/content/condufacil-logo.png" alt="Logo CEACondufacil" class="logo">
+      </a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#/inicio">INICIO <span class="sr-only">(current)</span></a></li>
+        <li><a href="#/nosotros">NOSOTROS</a></li>
+        <li><a href="#/precios">PRECIOS</a></li>
+        <li><a href="#/vehiculos">VEHICULOS</a></li>
+        <li><a href="#/instalaciones">INSTALACIONES</a></li>
+        <li><a href="#/map-modal" data-toggle="modal" data-target="#map-modal">CONTACTENOS</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">INTRANET<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="http://190.26.92.59:8080/CEAWeb-2xy/">CEA-Web®</a><li>
+            <li><a href="https://www.google.com/a/ceacondufacil.com/">Correo Corporativo - Personal Administrativo</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">One more separated link</a></li>
+          </ul>
+        </li>
+      </ul>
+      
+      
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+ <div id="map-modal" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+
+                  <!-- Modal content-->
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      <h4 class="modal-title">Informacion de Contacto</h4>
+                    </div>
+                    <div class="modal-body">
+                      <center>
+
+                        <p>El Centro de Enseñanza Automovilistica Condufacil se encuentra ubicado en la Calle 6 #71a-11.</p>
+                        <div class="google-maps">
+                          <iframe width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJywFI7QKcP44RSPvBguOOAPA&key=AIzaSyAtEfl3-4HwYFmBeMJKVVG96TZty_qYsv4" allowfullscreen></iframe>
+                        </div>
+                         <div class="google-maps">
+                          <iframe width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJL4L7FeCYP44RavHlge7I3ak&key=AIzaSyD_w23dlCSJXyWWebpixE7YY_CSsrBuNzE"  allowfullscreen></iframe>
+                        </div>
+                        <p>Los horarios de atencion son los siguientes:
+                        Lunes a Sabado:
+                        8am a 12m
+                        1pm a 6pm
+                        </p>
+                        <p>Nuestros asesores pueden ser contactados en los horarios anteriores llamando a los siguientes numeros:
+                        2902371 - 4141250</p>
+                      </center>
+
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+<br>
+
+			<ui-view></ui-view>
+
+<br>
+
+	<footer class="footer-av">
+  <div class="container">
+  <br>
+    <div class="row">
+      <div class="col-xs-12 col-sm-4">
+        <p>CEA Condufacil<br>
+        Autorizacion de Funcionamiento bajo:<br>
+        Resolucion 0000619 de 2013 del Ministerio de Transporte<br>
+        Resolucion 15-066 de 2012 de la Secretaria de Educacion de Bogota<br>
+        —<br>
+        Todos los derechos reservados.<br>
+        © 2015 - CEA Condufacil<br>
+        Powered by: Avangarde Software Solutions<br>
+        </p>
+      </div>
+
+      <div class="col-xs-12 col-sm-3 col-lg-2 col-sm-offset-1 col-lg-offset-2">
+        <p>
+        <strong>Telefonos:</strong> <br> <a href="tel:2902371 "><span itemprop="telephone">+57 (1) 290 2371</span></a> <br> <a href="tel:4141250"><span itemprop="telephone">+57 (1) 414 1250</span></a><br>
+        <strong>Correo Electronico:</strong> <br> <a href="mailto:servicioalcliente@ceacondufacil.com"><span itemprop="email">servicioalcliente@ceacondufacil.com</span></a><br>
+        —<br>
+        <div class="fb-like" data-href="https://www.facebook.com/condufacil/" data-width="30" data-layout="box_count" data-action="like" data-show-faces="true" data-share="true"></div>
+        </p>
+      </div>
+
+
+      <div class="col-xs-12 col-sm-3 col-lg-2 col-sm-offset-1 col-lg-offset-1">
+        <address>
+          <strong>Direcciones:</strong>
+          <br>
+          <span>Sede Principal</span><br>
+          <span>Transv. 18 Bis #14-36</span>,<br>
+          <span>Tercer piso</span>,<br>
+          Restrepo, Antonio Nariño<br>
+          <span>Bogota</span>, <span>CO</span>. <br>
+          —<br>
+          <span>Punto de Atencion</span><br>
+          <span>Calle 6 #71A-11</span>,<br>
+          Nueva Marsella, Kennedy<br>
+          <span>Bogota</span>, <span>CO</span>. 
+        </address>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+	<script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+
+</body>
+</html>
