@@ -39,7 +39,7 @@
 
   "private": true,
   "scripts": {
-    "start": "node ./condufacil-webpage/bin/www"
+    "start": "node .server.js"
   },
-  "main": "condufacil-webpage/bin/www"
+  "main": "server.js"
 }
