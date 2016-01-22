@@ -38,7 +38,5 @@
   "bundleDependencies": [],
 
   "private": true,
-  "scripts": {
-    "start": "node ./condufacil-webpage/bin/www"
-  }
+  "main": "/condufacil-webpage/bin/www"
 }
